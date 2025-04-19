@@ -7,3 +7,7 @@ init:
 	pre-commit install
 	cargo deny fetch
 	cargo b
+
+.PHONY: test
+test:
+	@cargo nextest run --all-features --examples
